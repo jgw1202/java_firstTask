@@ -13,7 +13,7 @@ public class InputHandler {
         return scanner.nextInt();
     }
 
-    public String getStringInput(String prompt, String... validInputs) {
+    public String getStringInput(String prompt, String... validInputs) { // ... 가변인자 사용
         System.out.print(prompt);
         String input;
         while (true) {

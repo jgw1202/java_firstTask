@@ -40,11 +40,18 @@ public class Calculator {
     public void removeResult() {
         resultQueue.poll();
         if (resultQueue.peek() != null) {
-            System.out.println(resultQueue.peek());
+            System.out.println("현재 가장 먼저 저장딘 데이터(peek) : " + resultQueue.peek());
         } else {
             System.out.println("큐가 비어 있습니다.");
         }
     }
 
+    public int getResult() {
+        return result;
+    }
+
+    public void setResult(int result) {
+        this.result = result;
+    }
 
 }
