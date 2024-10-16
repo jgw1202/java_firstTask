@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Calculator {
     /* 연산 결과를 저장하는 컬렉션 타입 필드 선언 및 생성 */
     private String arithmeticSymbol;
@@ -5,6 +8,7 @@ public class Calculator {
     private int secondNum;
 
     private int result;
+    Queue<Integer> resultQueue = new LinkedList<Integer>();
 
 
     public Calculator(String arithmeticSymbol, int firstNum, int secondNum) {
@@ -31,6 +35,8 @@ public class Calculator {
         else if(arithmeticSymbol.equals("%")) {
             result = firstNum % secondNum;
         }
+
+        resultQueue.add(result);
 
         return result;
     }
