@@ -5,25 +5,25 @@ public class Calculator {
     private int result;
     private Queue<Integer> resultQueue = new LinkedList<>();
 
-    public int calculate(String arithmeticSymbol, int firstNum, int secondNum) {
-        switch (arithmeticSymbol) {
-            case "+":
+    public int calculate(OperatorType operatorType, int firstNum, int secondNum) {
+        switch (operatorType) {
+            case ADD:
                 result = firstNum + secondNum;
                 break;
-            case "-":
+            case SUBTRACT:
                 result = firstNum - secondNum;
                 break;
-            case "*":
+            case MULTIPLY:
                 result = firstNum * secondNum;
                 break;
-            case "/":
+            case DIVIDE:
                 if (secondNum != 0) {
                     result = firstNum / secondNum;
                 } else {
                     throw new ArithmeticException("0으로 나눌 수 없습니다.");
                 }
                 break;
-            case "%":
+            case MODULUS:
                 if (secondNum != 0) {
                     result = firstNum % secondNum;
                 } else {
