@@ -43,6 +43,7 @@ public class Calculator {
 
     public void removeResult() {
        resultQueue.poll();
+        System.out.println(resultQueue.peek());
     }
 
     public String getArithmeticSymbol() {
@@ -50,11 +51,11 @@ public class Calculator {
     }
 
     public int getFirstNum() {
-        return getFirstNum();
+        return firstNum;
     }
 
     public int getSecondNum() {
-        return getSecondNum();
+        return secondNum;
     }
 
     public void setArithmeticSymbol(String arithmeticSymbol) {
