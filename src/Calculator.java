@@ -42,7 +42,7 @@ public class Calculator {
     }
 
     public void removeResult() {
-        result = 0;
+       resultQueue.poll();
     }
 
     public String getArithmeticSymbol() {
