@@ -13,6 +13,16 @@ public class InputHandler {
         return scanner.nextInt();
     }
 
+    public double getDoubleInput(String prompt) {
+        System.out.print(prompt);
+        while (!scanner.hasNextDouble()) {
+            System.out.println("유효한 숫자를 입력하세요.");
+            scanner.next();
+            System.out.print(prompt);
+        }
+        return scanner.nextDouble();
+    }
+
     public String getStringInput(String prompt, String... validInputs) {
         System.out.print(prompt);
         String input;

@@ -3,7 +3,7 @@ public enum OperatorType {
     SUBTRACT("-"),
     MULTIPLY("*"),
     DIVIDE("/"),
-    MODULUS("%");
+    MODULO("%");
 
     private final String symbol;
 
