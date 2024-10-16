@@ -11,11 +11,7 @@ public class Calculator {
     Queue<Integer> resultQueue = new LinkedList<Integer>();
 
 
-    public Calculator(String arithmeticSymbol, int firstNum, int secondNum) {
-        this.arithmeticSymbol = arithmeticSymbol;
-        this.firstNum = firstNum;
-        this.secondNum = secondNum;
-    }
+    public Calculator() { }
     public int calculate(String arithmeticSymbol, int firstNum, int secondNum) {
         /* 위 요구사항에 맞게 구현 */
         /* return 연산 결과 */
@@ -42,8 +38,12 @@ public class Calculator {
     }
 
     public void removeResult() {
-       resultQueue.poll();
-        System.out.println(resultQueue.peek());
+        resultQueue.poll();
+        if (resultQueue.peek() != null) {
+            System.out.println(resultQueue.peek());
+        } else {
+            System.out.println("큐가 비어 있습니다.");
+        }
     }
 
     public String getArithmeticSymbol() {

@@ -5,6 +5,8 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
+        Calculator calculator = new Calculator();
+
         while(true) {
             System.out.print("첫 번째 숫자를 입력하세요: ");
             int firstNum = scanner.nextInt();
@@ -14,7 +16,6 @@ public class Main {
             System.out.print("사칙연산 기호를 입력하세요: ");
             String arithmeticSymbol = scanner.next();
 
-            Calculator calculator = new Calculator(arithmeticSymbol, firstNum, secondNum);
 
             int result = calculator.calculate(arithmeticSymbol,firstNum,secondNum);
 
