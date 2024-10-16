@@ -18,8 +18,6 @@ public class Main {
 
             int result = calculator.calculate(arithmeticSymbol,firstNum,secondNum);
 
-
-
             System.out.println("결과: " + result);
 
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) ");
@@ -28,6 +26,8 @@ public class Main {
             if(exit.equals("exit")) {
                 break;
             }
+            System.out.print("가장 먼저 저장된 데이터를 삭제하시겠습니까? (remove 입력 시 삭제)");
+            calculator.removeResult();
         }
 
     }

@@ -4,6 +4,8 @@ public class Calculator {
     private int firstNum;
     private int secondNum;
 
+    private int result;
+
 
     public Calculator(String arithmeticSymbol, int firstNum, int secondNum) {
         this.arithmeticSymbol = arithmeticSymbol;
@@ -13,7 +15,6 @@ public class Calculator {
     public int calculate(String arithmeticSymbol, int firstNum, int secondNum) {
         /* 위 요구사항에 맞게 구현 */
         /* return 연산 결과 */
-        int result = 0;
 
         if(arithmeticSymbol.equals("+")) {
             result = firstNum + secondNum;
@@ -32,6 +33,10 @@ public class Calculator {
         }
 
         return result;
+    }
+
+    public void removeResult() {
+        result = 0;
     }
 
     public String getArithmeticSymbol() {
